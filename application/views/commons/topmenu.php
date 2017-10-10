@@ -1,6 +1,7 @@
 <!-- start: Header Menu -->
 <div class="nav-no-collapse header-nav">
     <ul class="nav pull-right">
+    <!--
         <li class="dropdown hidden-phone">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="halflings-icon white warning-sign"></i>
@@ -85,7 +86,9 @@
                 </li>	
             </ul>
         </li>
+        -->
         <!-- start: Notifications Dropdown -->
+        <!--
         <li class="dropdown hidden-phone">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="halflings-icon white tasks"></i>
@@ -144,9 +147,10 @@
                     <a class="dropdown-menu-sub-footer">View all tasks</a>
                 </li>	
             </ul>
-        </li>
+        </li>-->
         <!-- end: Notifications Dropdown -->
         <!-- start: Message Dropdown -->
+        <!--
         <li class="dropdown hidden-phone">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="halflings-icon white envelope"></i>
@@ -177,7 +181,7 @@
                         <span class="avatar"><img src="/assets/img/avatar.jpg" alt="Avatar"></span>
                         <span class="header">
                             <span class="from">
-                                Dennis Ji
+                                Dennis Jie
                                 </span>
                             <span class="time">
                                 56 min
@@ -240,7 +244,7 @@
                     <a class="dropdown-menu-sub-footer">View all messages</a>
                 </li>	
             </ul>
-        </li>
+        </li>-->
         <!-- end: Message Dropdown -->
         <li>
             <a class="btn" href="#">
@@ -250,7 +254,7 @@
         <!-- start: User Dropdown -->
         <li class="dropdown">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="halflings-icon white user"></i> Dennis Ji
+                <i class="halflings-icon white user"></i> <?php echo $currentuser;?>
                 <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">

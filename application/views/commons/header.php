@@ -1,3 +1,7 @@
+<head>
+<!-- start: Meta -->
+<meta charset="utf-8">
+<title><?php echo $title;?></title>
 <meta name="description" content="PadiApp">
 <meta name="author" content="PadiApp">
 <meta name="keyword" content="PadiApp">
@@ -23,3 +27,4 @@
 <!-- start: Favicon -->
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <!-- end: Favicon -->
+</head>
