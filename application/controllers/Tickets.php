@@ -12,6 +12,7 @@ class Tickets extends CI_Controller{
                 array('title'=>'PadiApp','url'=>'/'),
                 array('title'=>'Ticket','url'=>'/tickets'),
             ),
+            'currentuser'=>'Puji',
             'objs'=>$obj->gets(),
         );
         $this->load->view("tickets/tickets",$data);
