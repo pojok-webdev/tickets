@@ -4,6 +4,9 @@ class Tickets extends CI_Controller{
         parent::__construct();
         $this->load->model('ticket');
     }
+    function getclients(){
+        echo '["jamu iboe","royal binatoe"]';
+    }
     function index(){
         $obj = new Ticket();
         $data = array(

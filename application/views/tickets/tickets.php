@@ -14,7 +14,7 @@
 				<div class="box-header" data-original-title>
 					<h2><i class="halflings-icon user"></i><span class="break"></span><?php echo $title;?></h2>
 					<div class="box-icon">
-						<a href="#" class="btn-close"><i class="halflings-icon plus"></i></a>
+						<a class="btn-close" id="btn-add"><i class="halflings-icon plus"></i></a>
 					</div>
 				</div>
 				<div class="box-content">

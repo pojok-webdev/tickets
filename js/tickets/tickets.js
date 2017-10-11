@@ -20,6 +20,46 @@
         tahun = Math.ceil(timediff/(1000*60*60*24*365));
         that.html(hari+' hari '+jam+' jam '+menit+' menit '+detik+' detik');
     }
+    var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+        var matches, substringRegex;
+
+        // an array that will be populated with substring matches
+        matches = [];
+
+        // regex used to determine if a string contains the substring `q`
+        substrRegex = new RegExp(q, 'i');
+
+        // iterate through the pool of strings and for any string that
+        // contains the substring `q`, add it to the `matches` array
+        $.each(strs, function(i, str) {
+            if (substrRegex.test(str)) {
+                matches.push(str);
+            }
+        });
+        cb(matches);
+        };
+    };
+    arr = [];
+    arr.push('baba');
+    arr.push('bebe');
+    arr.push('bobo');
+    $.ajax({
+        url:'/tickets/getclients',
+        type:'post',
+        dataType:'json',
+    })
+    .done(function(res){
+        datasource = JSON.stringify(res);
+//        mydatasource = JSON.stringify(arr);
+        $("#typeahead").attr("data-source",datasource);
+        })
+    .fail(function(err){
+        console.log('Error',err);
+    });
+    $("#btn-add").click(function(){
+        $("#mdl-add").modal();
+    });
     $("#tickets").dataTable({
         "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
         "sPaginationType": "bootstrap",
