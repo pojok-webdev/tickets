@@ -6,6 +6,7 @@
 $.fn.autocomp = function(options){
 	var settings = $.extend({
 		data:'',
+		limit:10,
 		},options);
 	var liSelected;
 	$(this).bind('focus',function(){
@@ -33,6 +34,7 @@ $.fn.autocomp = function(options){
 						thiselement.parent().find('ul#padiDropDown').empty();
 					});
 				}
+				return ($('ul#padiDropDown').length<5);
 			});
 		}
 		if(code===13){

@@ -5,7 +5,14 @@ class Tickets extends CI_Controller{
         $this->load->model('ticket');
     }
     function getclients(){
-        echo '{"ji":"jamu iboe","rn":"resto nine","wd":"wismilak diplomat"}';
+        $this->load->model('client');
+        $objs = new Client();
+        $arr = array();
+        foreach($objs->getbycols() as $obj){
+            array_push($arr,'"'.$obj->id.'":"'.$obj->name.'"');
+        }
+        echo "{".implode(",",$arr)."}";
+ //       echo '{"ji":"jamu iboe","rn":"resto nine","wd":"wismilak diplomat"}';
     }
     function index(){
         $obj = new Ticket();
