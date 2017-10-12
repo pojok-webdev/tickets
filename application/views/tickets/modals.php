@@ -37,13 +37,15 @@
                         <div class="control-group">
                             <label class="control-label">Nama </label>
                             <div class="controls">
-                                <input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4" placeholder="Nama Pelanggan">
+                                <input type="text" class="span6 typeahead" id="autocomp" data-provide="typeahead" data-items="4" placeholder="Nama Pelanggan">
                             </div>
                         </div>                
                         <div class="control-group">
                             <label class="control-label">Site </label>
                             <div class="controls">
-                            <input type="text" class="span6" placeholder="Site">
+                            <select class="span6" id="site">
+                                <option val=1>PadiNET</option>
+                            </select>
                             </div>
                         </div>
                     </fieldset>

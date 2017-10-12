@@ -44,9 +44,18 @@
         url:'/tickets/getclients',
         dataType:'json',
     }).done(function(res){
-        $('#typeahead').autocomp({
+        $('#autocomp').autocomp({
             data:res
         });    
+    });
+    $('#autocomp').change(function(){
+        $("#site").setComboItems({
+            items:[
+                {id:1,'name':'PT Merdeke'},
+                {id:1,'name':'PT Lumintu'},
+                {id:3,'name':'PT Barokah'}
+            ]
+        });
     });
     $("#btn-add").click(function(){
         $("#mdl-add").modal();
