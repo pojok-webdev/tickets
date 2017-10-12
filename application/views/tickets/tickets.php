@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel='stylesheet' href='/assets/css/padi.autocomplete.css' />
 <?php $this->load->view("commons/header");?>
 <body>
 	<?php $this->load->view('commons/menuheader');?>
@@ -74,6 +75,7 @@
 	<?php $this->load->view('tickets/modals');?>
 	<?php $this->load->view('commons/footer');?>
 	<?php $this->load->view("commons/js.php");?>
+	<script type='text/javascript' src='/assets/js/padi.autocomplete.js' ></script>
 	<script type='text/javascript' src='/js/padi.commons.js'></script>
 	<script type='text/javascript' src='/js/tickets/tickets.js'></script>
 </body>

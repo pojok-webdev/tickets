@@ -40,6 +40,11 @@
         cb(matches);
         };
     };
+    autocompdata = {"bo":"bebob","ro":"rocksteady","ir":"irma","ao":"april oneal","sr":"shredder","kr":"krang"};
+    $('#typeahead').autocomp({
+        data:autocompdata
+    });
+    /*
     arr = [];
     arr.push('baba');
     arr.push('bebe');
@@ -56,7 +61,7 @@
         })
     .fail(function(err){
         console.log('Error',err);
-    });
+    });*/
     $("#btn-add").click(function(){
         $("#mdl-add").modal();
     });
