@@ -5,7 +5,7 @@ class Tickets extends CI_Controller{
         $this->load->model('ticket');
     }
     function getclients(){
-        echo '["jamu iboe","royal binatoe"]';
+        echo '{"ji":"jamu iboe","rn":"resto nine","wd":"wismilak diplomat"}';
     }
     function index(){
         $obj = new Ticket();

@@ -40,28 +40,14 @@
         cb(matches);
         };
     };
-    autocompdata = {"bo":"bebob","ro":"rocksteady","ir":"irma","ao":"april oneal","sr":"shredder","kr":"krang"};
-    $('#typeahead').autocomp({
-        data:autocompdata
-    });
-    /*
-    arr = [];
-    arr.push('baba');
-    arr.push('bebe');
-    arr.push('bobo');
     $.ajax({
         url:'/tickets/getclients',
-        type:'post',
         dataType:'json',
-    })
-    .done(function(res){
-        datasource = JSON.stringify(res);
-//        mydatasource = JSON.stringify(arr);
-        $("#typeahead").attr("data-source",datasource);
-        })
-    .fail(function(err){
-        console.log('Error',err);
-    });*/
+    }).done(function(res){
+        $('#typeahead').autocomp({
+            data:res
+        });    
+    });
     $("#btn-add").click(function(){
         $("#mdl-add").modal();
     });
